@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{user.username}}</title>
+</head>
+<style>
+    body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 83%;
+    }
+</style>
+<body>
+    <div>
+        <a href="/">View Site</a><br>
+        <a href="/user/logout/">Logout</a>
+    </div>
+    <hr>
+    <div>
+        <p>
+            Username<br>{{user.username}}
+        </p>
+        <p>
+            Name<br>{{user.first_name}}  {{user.last_name}}
+        </p>
+        <p>
+            Email<br>{{user.email}}
+        </p>
+        <a href="/user/{{user.id}}/edit/">Edit Profile</a>
+    </div>
+    <hr>
+    <div>
+        <h2><u>Scoreboard</u></h2>
+        <h3><u>Anatomy</u></h3>
+        <ul>
+            <li>
+                Lower Limb - 50%
+            </li>
+            <li>
+                Upper Limb - 50%
+            </li>
+            <li>
+                Thorax - 50%
+            </li>
+        </ul>
+        <h3><u>Biochemistry</u></h3>
+        <ul>
+            <li>
+                Test 1 - 50%
+            </li>
+            <li>
+                Test 2 - 50%
+            </li>
+            <li>
+                Test 3 - 50%
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

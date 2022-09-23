@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+</head>
+<style>
+    body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 81%;
+    }
+</style>
+<body>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser or user.is_staff %}
+        <div>
+            <h3><u>Add Course</u></h3>
+            {% load crispy_forms_tags %}
+            <form method="post">
+                {{form.as_p}}
+                <button type="submit">Add</button>
+            </form>
+            <br><br>
+            <a href="/anatomy/lowerlimb/">[Back]</a>
+        </div>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
